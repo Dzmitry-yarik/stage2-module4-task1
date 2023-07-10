@@ -8,7 +8,7 @@ public class Employee {
     private String email;
     private String carNumber;
 
-    public Employee() {
+    public Employee(EmployeeBuilder employeeBuilder) {
         //it’s just a desk manager with no parameters to create an instance
     }
 
@@ -59,7 +59,7 @@ public class Employee {
     public void setCarNumber(String carNumber) {
         this.carNumber = carNumber;
     }
-    
+
     public static EmployeeBuilder getBuilder() {
         return new EmployeeBuilder();
     }
