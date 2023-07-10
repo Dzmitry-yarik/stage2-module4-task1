@@ -20,7 +20,7 @@ public class H2ConnectionFactory implements ConnectionFactory {
         try (InputStream in = Files.newInputStream(Paths.get("h2database.properties"))) {
             props.load(in);
         } catch (IOException ex) {
-            ex.printStackTrace();
+             throw new NullPointerException();
         }
 
         String driver = props.getProperty("jdbc_driver");
