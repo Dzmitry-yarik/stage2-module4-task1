@@ -20,7 +20,7 @@ public class H2ConnectionFactory implements ConnectionFactory {
         try (InputStream in = Files.newInputStream(Paths.get("h2database.properties"))) {
             props.load(in);
         } catch (IOException ex) {
-            throw new RuntimeException(ex);
+            ex.printStackTrace();
         }
 
         String driver = props.getProperty("jdbc_driver");
@@ -31,7 +31,7 @@ public class H2ConnectionFactory implements ConnectionFactory {
             Class.forName(driver);
             return DriverManager.getConnection(url, user, password);
         } catch (SQLException | ClassNotFoundException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 }
