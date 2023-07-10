@@ -8,11 +8,8 @@ public class Employee {
     private String email;
     private String carNumber;
 
-    public static void main(String[] args) {
-        System.out.println(getBuilder());
-    }
-
     public Employee() {
+        //it’s just a desk manager with no parameters to create an instance
     }
 
     public String getName() {
