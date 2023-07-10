@@ -13,8 +13,8 @@ public class Employee {
     private String email;
     private String carNumber;
 
-    public Employee(EmployeeBuilder employeeBuilder) {
-        //it’s just a desk manager with no parameters to create an instance
+    public Employee() {
+    //it’s just a desk manager with no parameters to create an instance
     }
 
     public String getName() {
@@ -70,45 +70,44 @@ public class Employee {
     }
 
     public static class EmployeeBuilder {
-        private String name;
-        private String lastName;
-        private String position;
-        private String phone;
-        private String email;
-        private String carNumber;
+        private Employee employee;
+
+        public EmployeeBuilder(){
+            this.employee = new Employee();
+        }
 
         public EmployeeBuilder setName(String name){
-            this.name = name;
+            employee.name = name;
             return this;
         }
 
         public EmployeeBuilder setLastName(String lastName){
-            this.lastName = lastName;
+            employee.lastName = lastName;
             return this;
         }
 
         public EmployeeBuilder setPosition(String position) {
-            this.position = position;
+            employee.position = position;
             return this;
         }
 
         public EmployeeBuilder setPhone(String phone) {
-            this.phone = phone;
+            employee.phone = phone;
             return this;
         }
 
         public EmployeeBuilder setEmail(String email) {
-            this.email = email;
+            employee.email = email;
             return this;
         }
 
         public EmployeeBuilder setCarNumber(String carNumber) {
-            this.carNumber = carNumber;
+            employee.carNumber = carNumber;
             return this;
         }
 
-        public Employee build() {
-            return new Employee(this);
+        public Employee build(){
+            return employee;
         }
     }
 }
