@@ -107,12 +107,6 @@ public class Employee {
 
         public Employee build(){
             Employee employee = new Employee();
-            employee.setName(name);
-            employee.setLastName(lastName);
-            employee.setPosition(position);
-            employee.setPhone(phone);
-            employee.setEmail(email);
-            employee.setCarNumber(carNumber);
             return employee;
         }
     
