@@ -102,21 +102,8 @@ public class Employee {
             return this;
         }
 
-        public Employee build(){
-            Employee employee = new Employee();
-            return employee;
-        }
-    
-        @Override
-        public String toString() {
-            return "EmployeeBuilder{" +
-                    "name='" + name + '\'' +
-                    ", lastName='" + lastName + '\'' +
-                    ", position='" + position + '\'' +
-                    ", phone='" + phone + '\'' +
-                    ", email='" + email + '\'' +
-                    ", carNumber='" + carNumber + '\'' +
-                    '}';
+        public Employee build() {
+            return new Employee(this);
         }
     }
 }
