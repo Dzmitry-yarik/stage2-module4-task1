@@ -1,5 +1,10 @@
 package com.mjc.stage2;
 
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+
+@EqualsAndHashCode
+@ToString
 public class Employee {
     private String name;
     private String lastName;
